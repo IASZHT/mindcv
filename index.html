@@ -1294,10 +1294,8 @@ your own CV tasks.</p>
 </li>
 </ul>
 <p>Users can customize and launch their transfer learning or training task in one command line.</p>
-<div class="highlight"><pre><span></span><code>```shell
-# transfer learning in one command line
-python train.py --model=swin_tiny --pretrained --opt=adamw --lr=0.001 --data_dir=/path/to/data
-```
+<div class="highlight"><pre><span></span><code><span class="c1"># transfer learning in one command line</span>
+python<span class="w"> </span>train.py<span class="w"> </span>--model<span class="o">=</span>swin_tiny<span class="w"> </span>--pretrained<span class="w"> </span>--opt<span class="o">=</span>adamw<span class="w"> </span>--lr<span class="o">=</span><span class="m">0</span>.001<span class="w"> </span>--data_dir<span class="o">=</span>/path/to/data
 </code></pre></div>
 <ul>
 <li>
@@ -1348,25 +1346,21 @@ of each key component and the train/validate/predict pipelines.</p>
 <p>It is easy to train your model on a standard or customized dataset using <code>train.py</code>, where the training strategy (e.g.,
 augmentation, LR scheduling) can be configured with external arguments or a yaml config file.</p>
 <ul>
-<li>
-<p>Standalone Training</p>
+<li>Standalone Training</li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="c1"># standalone training</span>
 python<span class="w"> </span>train.py<span class="w"> </span>--model<span class="o">=</span>resnet50<span class="w"> </span>--dataset<span class="o">=</span>cifar10<span class="w"> </span>--dataset_download
 </code></pre></div>
-</li>
-</ul>
 <p>Above is an example of training ResNet50 on CIFAR10 dataset on a CPU/GPU/Ascend device</p>
 <ul>
 <li>Distributed Training</li>
 </ul>
 <p>For large datasets like ImageNet, it is necessary to do training in distributed mode on multiple devices. This can be
   achieved with <code>mpirun</code> and parallel features supported by MindSpore.</p>
-<div class="highlight"><pre><span></span><code>```shell
-# distributed training
-# assume you have 4 GPUs/NPUs
-mpirun -n 4 python train.py --distribute \
-    --model=densenet121 --dataset=imagenet --data_dir=/path/to/imagenet
-```
+<div class="highlight"><pre><span></span><code><span class="c1"># distributed training</span>
+<span class="c1"># assume you have 4 GPUs/NPUs</span>
+mpirun<span class="w"> </span>-n<span class="w"> </span><span class="m">4</span><span class="w"> </span>python<span class="w"> </span>train.py<span class="w"> </span>--distribute<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--model<span class="o">=</span>densenet121<span class="w"> </span>--dataset<span class="o">=</span>imagenet<span class="w"> </span>--data_dir<span class="o">=</span>/path/to/imagenet
 </code></pre></div>
 <blockquote>
 <p>Notes: If the script is executed by the root user, the <code>--allow-run-as-root</code> parameter must be added to <code>mpirun</code>.</p>
@@ -1379,9 +1373,7 @@ mpirun -n 4 python train.py --distribute \
 </ul>
 <p>You can configure your model and other components either by specifying external parameters or by writing a yaml config
   file. Here is an example of training using a preset yaml file.</p>
-<div class="highlight"><pre><span></span><code>```shell
-mpirun --allow-run-as-root -n 4 python train.py -c configs/squeezenet/squeezenet_1.0_gpu.yaml
-```
+<div class="highlight"><pre><span></span><code>mpirun<span class="w"> </span>--allow-run-as-root<span class="w"> </span>-n<span class="w"> </span><span class="m">4</span><span class="w"> </span>python<span class="w"> </span>train.py<span class="w"> </span>-c<span class="w"> </span>configs/squeezenet/squeezenet_1.0_gpu.yaml
 </code></pre></div>
 <p>!!! tip "Pre-defined Training Strategies"
   We provide more than 20 training recipes that achieve SoTA results on ImageNet currently.
@@ -1393,12 +1385,10 @@ mpirun --allow-run-as-root -n 4 python train.py -c configs/squeezenet/squeezenet
 </ul>
 <p>To run training on the <a href="https://www.huaweicloud.com/intl/en-us/product/modelarts.html">ModelArts</a>
   or <a href="https://openi.pcl.ac.cn/">OpenI</a> cloud platform:</p>
-<div class="highlight"><pre><span></span><code>```text
-1. Create a new training task on the cloud platform.
+<div class="highlight"><pre><span></span><code>1. Create a new training task on the cloud platform.
 2. Add the parameter &#39;config&#39; and specify the path to the yaml config file on the website UI interface.
 3. Add the parameter &#39;enable_modelarts&#39; and set True on the website UI interface.
 4. Fill in other blanks on the website and launch the training task.
-```
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Graph Mode and PyNative Mode</p>
