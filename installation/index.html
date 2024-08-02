@@ -492,28 +492,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#install-from-source-bleeding-edge-version" class="md-nav__link">
+  <a href="#install-from-source" class="md-nav__link">
     <span class="md-ellipsis">
-      Install from Source (Bleeding Edge Version)
+      Install from Source
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Install from Source (Bleeding Edge Version)">
+    <nav class="md-nav" aria-label="Install from Source">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#from-vcs" class="md-nav__link">
     <span class="md-ellipsis">
       from VCS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#from-local-src" class="md-nav__link">
-    <span class="md-ellipsis">
-      from local src
     </span>
   </a>
   
@@ -1020,28 +1011,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#install-from-source-bleeding-edge-version" class="md-nav__link">
+  <a href="#install-from-source" class="md-nav__link">
     <span class="md-ellipsis">
-      Install from Source (Bleeding Edge Version)
+      Install from Source
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Install from Source (Bleeding Edge Version)">
+    <nav class="md-nav" aria-label="Install from Source">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#from-vcs" class="md-nav__link">
     <span class="md-ellipsis">
       from VCS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#from-local-src" class="md-nav__link">
-    <span class="md-ellipsis">
-      from local src
     </span>
   </a>
   
@@ -1087,7 +1069,7 @@
 
 <h2 id="dependency">Dependency<a class="headerlink" href="#dependency" title="Permanent link">&para;</a></h2>
 <ul>
-<li>mindspore &gt;= 1.8.1</li>
+<li>mindspore == 2.3.0</li>
 <li>numpy &gt;= 1.17.0</li>
 <li>pyyaml &gt;= 5.3</li>
 <li>tqdm</li>
@@ -1132,21 +1114,9 @@ troubleshoot if you run into errors.</p>
 <p>The above command will <strong>NOT</strong> install <a href="https://www.mindspore.cn/">MindSpore</a>.
 We highly recommend you install <a href="https://www.mindspore.cn/">MindSpore</a> following the <a href="https://www.mindspore.cn/install">official instructions</a>.</p>
 </div>
-<h2 id="install-from-source-bleeding-edge-version">Install from Source (Bleeding Edge Version)<a class="headerlink" href="#install-from-source-bleeding-edge-version" title="Permanent link">&para;</a></h2>
+<h2 id="install-from-source">Install from Source<a class="headerlink" href="#install-from-source" title="Permanent link">&para;</a></h2>
 <h3 id="from-vcs">from VCS<a class="headerlink" href="#from-vcs" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/mindspore-lab/mindcv.git
-</code></pre></div>
-<h3 id="from-local-src">from local src<a class="headerlink" href="#from-local-src" title="Permanent link">&para;</a></h3>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>As this project is in active development, if you are a developer or contributor, please prefer this installation!</p>
-</div>
-<p>MindCV can be directly used from <a href="https://github.com/mindspore-lab/mindcv">GitHub</a> by cloning the repository into a local folder which might be useful if you want to use the very latest version:</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mindspore-lab/mindcv.git
-</code></pre></div>
-<p>After cloning from <code>git</code>, it is recommended that you install using "editable" mode, which can help resolve potential module import issues:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>mindcv
-pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
 </code></pre></div>
 
 
